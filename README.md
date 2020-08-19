@@ -1,23 +1,14 @@
-# Rewrites Example
+# Rewrites bug
 
-This example shows how to use [rewrites in Next.js](https://nextjs.org/docs/api-reference/next.config.js/rewrites) to map an incoming request path to a different destination path.
+This source code reproduces a bug that occurs when the rewrites option is used with basePath and public directory. I can't rewirte to the desired URL. If any of the conditions are not met, the bug will not occur.
 
-The index page ([`pages/index.js`](pages/index.js)) has a list of links that match the rewrites defined in [`next.config.js`](next.config.js). Run or deploy the app to see how it works!
+First, build next server and run it.
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/rewrites)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example rewrites rewrites-app
-# or
-yarn create next-app --example rewrites rewrites-app
+```sh
+npm install
+npm run build
+npm run start
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Second, GET the url what should be rewritten.
+`http://localhost:3000/todos`
