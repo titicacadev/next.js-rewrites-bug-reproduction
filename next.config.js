@@ -1,4 +1,5 @@
 module.exports = {
+  basePath: '/test',
   async rewrites() {
     return [
       {
