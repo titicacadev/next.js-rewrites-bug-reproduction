@@ -12,3 +12,25 @@ npm run start
 
 Second, GET the url what should be rewritten.
 `http://localhost:3000/todos`
+
+## Expected Result
+
+```
+$ curl 'http://localhost:3000/todos'
+HTTP/1.1 200 OK
+...
+```
+
+## Actual Result
+
+```
+HTTP/1.1 404 Not Found
+Cache-Control: no-cache, no-store, max-age=0, must-revalidate
+X-Powered-By: Next.js
+ETag: "9b4-euJYEtH38aPbb6xrjZoe12UwZLA"
+Content-Type: text/html; charset=utf-8
+Content-Length: 2484
+Vary: Accept-Encoding
+Date: Wed, 19 Aug 2020 02:14:54 GMT
+Connection: keep-alive
+```
